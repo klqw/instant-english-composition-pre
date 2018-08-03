@@ -1,0 +1,14 @@
+{
+  "name": "instant-english-composition-pre",
+  "version": "1.0.0",
+  "description": "瞬間英作文",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pug": "^2.0.0-rc.4"
+  }
+}
