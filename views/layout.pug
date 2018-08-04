@@ -2,7 +2,34 @@ doctype html
 html(lang="ja")
   head
     meta(charset="UTF-8")
-    title 瞬間英作文
+    title 瞬間英作文(試作版)
   body
-    block body
-      h1 瞬間英作文
+    block content
+    #modal-contents
+      div #{flag}コース
+        button#close ☓
+      #stage-zone
+        #question-zone
+          p#question-display.non-started ここをクリックすると問題が出ます。
+        input(type="text")#answer-text
+        br
+        p#information 英作文を入力したらEnterキーを押してください。
+        #judge-zone
+          p#judge-display
+        #cheat-zone
+          p
+            button#cheat-button.btn.hidden カンニングボタン
+          p#cheat-display.hidden
+      #result-zone
+        p#result-display
+        p#retry-button.result-btn もう一度最初からやる
+        p#mistake-retry-button.result-btn 間違えた問題に再チャレンジ
+        p#mistake-check-button.result-btn 間違えた問題を見る
+        p#stage-select-button.result-btn #{flag}に戻る
+        p#index.button.result-btn(onclick="location.href='index.html'") トップページに戻る
+      #mistake-display-zone
+        #mistake-display
+        button#done 確認したので戻る
+    .footer
+      input.btn(type="button", onclick="location.href='index.html'", value="トップに戻る")
+    input.course-flag(type="hidden", value=`#{flag}`)
