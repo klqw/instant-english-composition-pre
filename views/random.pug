@@ -1,4 +1,9 @@
 extends layout.pug
 
 block content
-  h3 ランダムモード
+  h3 #{flag}モード
+  h2 問題一覧
+  each sentence in sentences
+    p 問題#{sentence.id}: #{sentence.question}
+    p 解答#{sentence.id}: #{sentence.answer}
+    hr
